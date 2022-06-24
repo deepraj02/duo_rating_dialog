@@ -1,0 +1,20 @@
+name: duo_rating_dialog
+description: An extended version of the rating_dialog package. Allows user to
+  rate two Star Rating bars.
+version: 0.0.1
+homepage: null
+
+environment:
+  sdk: ">=2.12.3 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_rating_bar: ^4.0.1
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter: null
