@@ -21,18 +21,36 @@ Enhanced [rating_dialog](https://pub.dev/packages/rating_dialog)
 
 ## Usage
 
-![duo_rating_dialog](https://user-images.githubusercontent.com/16275252/175461987-e45b0dcb-2cc7-4cff-91ba-3cfc94004018.gif)
+![duo_rating_updated](https://user-images.githubusercontent.com/16275252/175483893-32a8445e-846e-4f71-bdb8-733e8d55db84.gif)
+
 
 ```dart
-DuoRatingDialog(
-    title: const Text('How was the experience'),
-    submitButtonText: 'Submit',
-    submitButtonTextStyle:
-        const TextStyle(color: Colors.orangeAccent),
-    onSubmitted: (resp) => log(
-    'Resp one : ${resp.ratingOne}, Resp two: ${resp.ratingTwo}',
-    ),
-)
+  return DuoRatingDialog(
+                    title: const Text('How was your session?'),
+                    submitButtonText: 'SUBMIT',
+                    submitButtonTextStyle: const TextStyle(color: Colors.black),
+                    onSubmitted: (value) {
+                      // Passing data to a new page as an example
+
+                      Map<String, dynamic> ratingsOneMap = {
+                        "rating": value.ratingOne,
+                        "status": value.getRatingOneStatus
+                      };
+                      Map<String, dynamic> ratingsTwoMap = {
+                        "rating": value.ratingTwo,
+                        "status": value.getRatingTwoStatus
+                      };
+                      List<Map<String, dynamic>> ratingsData = [
+                        ratingsOneMap,
+                        ratingsTwoMap
+                      ];
+
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) =>
+                                  ResultsPage(ratingsData: ratingsData))));
+                    });
 ```
 
 ## Additional information

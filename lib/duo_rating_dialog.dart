@@ -10,9 +10,42 @@ class RatingDialogResponse {
   /// The user's second rating
   double ratingTwo;
 
+  String get getRatingOneStatus {
+    if (ratingOne == 1.0) {
+      return 'Poor';
+    } else if (ratingOne == 2.0) {
+      return 'Below Average';
+    } else if (ratingOne == 3.0) {
+      return 'Average';
+    } else if (ratingOne == 4.0) {
+      return 'Above Average';
+    } else if (ratingOne == 5.0) {
+      return 'Excellent';
+    } else {
+      return '';
+    }
+  }
+
+  String get getRatingTwoStatus {
+    if (ratingTwo == 1.0) {
+      return 'Poor';
+    } else if (ratingTwo == 2.0) {
+      return 'Below Average';
+    } else if (ratingTwo == 3.0) {
+      return 'Average';
+    } else if (ratingTwo == 4.0) {
+      return 'Above Average';
+    } else if (ratingTwo == 5.0) {
+      return 'Excellent';
+    } else {
+      return '';
+    }
+  }
+
   RatingDialogResponse({this.ratingOne = 0.0, this.ratingTwo = 0.0});
 }
 
+// ignore: must_be_immutable
 class DuoRatingDialog extends StatefulWidget {
   /// The dialog's title
   final Text title;
@@ -126,7 +159,14 @@ class _DuoRatingDialogState extends State<DuoRatingDialog> {
                     ),
                   ),
                   const SizedBox(
-                    height: 15,
+                    height: 5.0,
+                  ),
+                  Text(
+                    _response!.getRatingOneStatus,
+                    textScaleFactor: 0.7,
+                  ),
+                  const SizedBox(
+                    height: 10,
                   ),
                   //Question Two
                   widget.messageTwo,
@@ -152,6 +192,27 @@ class _DuoRatingDialogState extends State<DuoRatingDialog> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  Text(
+                    _response!.getRatingTwoStatus,
+                    textScaleFactor: 0.7,
+                  ),
+                  TextButton(
+                    onPressed:
+                        _response!.ratingOne == 0 || _response!.ratingTwo == 0
+                            ? null
+                            : () {
+                                if (!widget.force) Navigator.pop(context);
+                                widget.onSubmitted.call(_response!);
+                              },
+                    child: Text(
+                      widget.submitButtonText,
+                      style: widget.submitButtonTextStyle,
+                    ),
+                  ),
+
                   if (!widget.force &&
                       widget.onCancelled != null &&
                       widget.showCloseButton) ...[
