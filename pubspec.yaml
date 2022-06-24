@@ -2,7 +2,7 @@ name: duo_rating_dialog
 description: An extended version of the rating_dialog package. Allows user to
   rate two Star Rating bars.
 version: 0.0.1
-homepage: null
+homepage: https://github.com/vipinkashyap/duo_rating_dialog
 
 environment:
   sdk: ">=2.12.3 <3.0.0"
