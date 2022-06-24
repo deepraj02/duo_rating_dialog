@@ -13,7 +13,6 @@ and the Flutter guide for
 
 A custom rating dialog for developers who want to ask users for two ratings
 
-[Demo]()
 
 ## Features
 
