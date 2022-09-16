@@ -50,6 +50,9 @@ class DuoRatingDialog extends StatefulWidget {
   /// The dialog's title
   final Text title;
 
+  /// To add any Specific Logo/Icon
+  final Icon ratingicon;
+
   /// The dialog's first message/description text
   final Text messageOne;
 
@@ -97,6 +100,10 @@ class DuoRatingDialog extends StatefulWidget {
       this.showCloseButton = true,
       this.initialRatingOne = 0.0,
       this.initialRatingTwo = 0.0,
+      this.ratingicon = const Icon(
+        Icons.flutter_dash,
+        size: 70,
+      ),
       required this.submitButtonText,
       required this.submitButtonTextStyle,
       required this.onSubmitted,
@@ -130,6 +137,7 @@ class _DuoRatingDialogState extends State<DuoRatingDialog> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  widget.ratingicon,
                   widget.title,
                   const SizedBox(
                     height: 15,

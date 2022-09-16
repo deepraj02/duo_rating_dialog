@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -46,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     title: const Text('How was your session?'),
                     submitButtonText: 'SUBMIT',
                     submitButtonTextStyle: const TextStyle(color: Colors.black),
+                    ///ratingicon: const Icon(Icons.flutter_dash),
                     onSubmitted: (value) {
                       log('First rating: ${value.ratingOne.toString()}, Second rating: ${value.ratingTwo.toString()}');
                     });
