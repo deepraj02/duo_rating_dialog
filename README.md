@@ -16,7 +16,7 @@ and the Flutter guide for
 [![MasterHead](https://media.giphy.com/media/E89xxATM4iZoPdr6Tb/giphy.gif)](https://pub.dev/packages/duo_rating_dialog)
 </h1>
 
-# Duo Rating Dialog🌠
+# [Duo Rating Dialog🌠](https://pub.dev/packages/duo_rating_dialog)
 ## A Custom Rating Dialog which allows developers to ask users for two ratings at once
 
 A custom rating dialog which allows developers to ask users for two ratings.
