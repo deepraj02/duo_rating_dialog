@@ -47,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     title: const Text('How was your session?'),
                     submitButtonText: 'SUBMIT',
                     submitButtonTextStyle: const TextStyle(color: Colors.black),
+
                     ///ratingicon: const Icon(Icons.flutter_dash),
                     onSubmitted: (value) {
                       log('First rating: ${value.ratingOne.toString()}, Second rating: ${value.ratingTwo.toString()}');
@@ -54,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               });
         },
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.preview),
       ),
     );
   }

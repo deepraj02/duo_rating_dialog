@@ -11,16 +11,43 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-A custom rating dialog for developers who want to ask users for two ratings
+<h1 align="center">
+
+[![MasterHead](https://media.giphy.com/media/E89xxATM4iZoPdr6Tb/giphy.gif)](https://pub.dev/packages/duo_rating_dialog)
+</h1>
+
+# Duo Rating Dialog🌠
+## A Custom Rating Dialog which allows developers to ask users for two ratings at once
+
+A custom rating dialog which allows developers to ask users for two ratings.
+
+<p align='center'>
+    <img src="https://user-images.githubusercontent.com/63138398/190869012-103a414d-16ce-40b2-a7d8-25511e982ffc.png" />
+    <img src="https://user-images.githubusercontent.com/63138398/190869633-995fbd78-9c1c-4d97-8ee6-548402ecd702.png" />
+</p>
 
 
 ## Features
 
 Enhanced [rating_dialog](https://pub.dev/packages/rating_dialog)
 
-## Usage
+| Parameter                 | Type         |      Description                                           |
+| -----------               | -------         |      -----------                                           |
+| title                     | Text         |The dialog's title                 
+| ratingicon                | Icon         |To add any Specific Logo/Icon
+| messageOne                | Text     |The dialog's first message/description text
+| messageTwo                | Text         |The dialog's second message/description text
+| starColor                 | Color         |The rating bar (star icon & glow) color
+| starSize                  | double         |The size of the star
+| force                     | bool         |Disables the cancel button and forces the user to leave a rating
+| showCloseButton           | bool         |Show or hide the close button
+| initialRatingOne          | double         |The initial first rating of the rating bar
+| initialRatingTwo          | double         |The initial second rating of the rating bar
+| submitButtonText          | String         |The submit button's label/text
+| submitButtonTextStyle     | TextStyle         | The submit button's label/text                                  
+| Function(RatingDialogResponse) |Function    | Returns a RatingDialogResponse with user's rating and comment values                 
 
-![duo_rating_updated](https://user-images.githubusercontent.com/16275252/175483893-32a8445e-846e-4f71-bdb8-733e8d55db84.gif)
+## Usage
 
 
 ```dart
@@ -49,9 +76,16 @@ Enhanced [rating_dialog](https://pub.dev/packages/rating_dialog)
                           MaterialPageRoute(
                               builder: ((context) =>
                                   ResultsPage(ratingsData: ratingsData))));
-                    });
+                    }
+                    );
 ```
 
-## Additional information
+# Acknowledgments
 
-This is my first package. Feel free to flag any issues you might have
+This package was created by [Vipin Kumar Kashyap](https://github.com/vipinkashyap) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/Vipinkashyup) 
+
+# Contributors 
+[Deepraj Baidya](https://github.com/Deepraj02)  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/deeprajbaidya) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/deepraj022) 
+# Bugs or Requests
+
+If you encounter any problems feel free to open an [issue](https://github.com/vipinkashyap/duo_rating_dialog/issues/new). Pull request are also welcome.
