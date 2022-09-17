@@ -22,8 +22,8 @@ and the Flutter guide for
 A custom rating dialog which allows developers to ask users for two ratings.
 
 <p align='center'>
-    <img src="https://user-images.githubusercontent.com/63138398/190869012-103a414d-16ce-40b2-a7d8-25511e982ffc.png" />
-    <img src="https://user-images.githubusercontent.com/63138398/190869633-995fbd78-9c1c-4d97-8ee6-548402ecd702.png" />
+    <img src="https://user-images.githubusercontent.com/63138398/190869012-103a414d-16ce-40b2-a7d8-25511e982ffc.png" width="350"/>
+    <img src="https://user-images.githubusercontent.com/63138398/190869633-995fbd78-9c1c-4d97-8ee6-548402ecd702.png" width="300" />
 </p>
 
 
